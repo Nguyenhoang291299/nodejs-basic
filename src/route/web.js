@@ -5,8 +5,9 @@ let router = express.Router();
 const initWebRoute = (app) => {
     // simple query
     router.get('/', homeController.getHomepage)
+    router.get('/detail/user/:id', homeController.getDetailpage)
 
-    router.get('/about', homeController.getAboutpage)
+    // router.get('/about', homeController.getAboutpage)
     return app.use('/',router)
 }
 
